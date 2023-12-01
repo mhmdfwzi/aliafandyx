@@ -1,0 +1,28 @@
+categories (id (PK), parent_id (FK), name , slug(unique), .........)
+
+stores( 
+          id (PK) , 
+          name ,
+          slug (unique) ,  
+          description (nullable) , 
+          logo_image (nullable) , 
+          cover_image (nullable) ,
+          status (enum [active , inactive])
+          )  
+
+
+products ( id (PK)  , store_id (FK), name , slug(unique) , description , price , .......) 
+
+orders (id (PK) , number , user_id ) 
+
+orders_items( order_id (FK) , product_id , status )
+
+
+
+ 
+
+attributes (id , name)  => attribute hasMany attribute_values
+
+attribute_values ( id , attribute_id , name , value ) attribute_value belongTo attribute
+
+product_variant (id , product_id , attribute_id , attribute_value_id , sku , quantity , price)

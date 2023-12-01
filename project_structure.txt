@@ -1,0 +1,178 @@
++---app
+|   +---Console
+|   |       Kernel.php
+|   +---Exceptions
+|   |       Handler.php
+|   +---Http
+|   |   +---Controllers
+|   |   |    +---Api
+|   |   |    |   AccessTokenController.php
+|   |   |    |   ProductsController.php
+|   |   |    +---Auth
+|   |   |    |   AuthenticatedSessionController.php
+|   |   |    |   ConfirmablePasswordController.php
+|   |   |    |   EmailVerificationNotificationController.php
+|   |   |    |   EmailVerificationPromptController.php
+|   |   |    |   NewPasswordController.php
+|   |   |    |   PasswordController.php
+|   |   |    |   PasswordResetLinkController.php
+|   |   |    |   RegisteredUserController.php
+|   |   |    |   VerifyEmailController.php
+|   |   |    +---Backend
+|   |   |    |   +---Admin
+|   |   |    |   |   AdminController.php
+|   |   |    |   |   AttributesController.php
+|   |   |    |   |   AttributeValuesController.php
+|   |   |    |   |   BannerControoler.php
+|   |   |    |   |   BrandsController.php
+|   |   |    |   |   CategoriesController.php
+|   |   |    |   |   CouponController.php
+|   |   |    |   |   DashboardController.php
+|   |   |    |   |   NotificationsControoler.php
+|   |   |    |   |   OrderController.php
+|   |   |    |   |   ProductsController.php
+|   |   |    |   |   ProductVariantsController.php
+|   |   |    |   |   RoleController.php
+|   |   |    |   |   StoresController.php
+|   |   |    |   |   UserController.php
+|   |   |    |   |   VendoeController.php
+|   |   |    |   |   WebsitePartsController.php
+|   |   |    |   +---Vendor
+|   |   |    |   |   DashboardController.php
+|   |   |    |   |   ProductsController.php
+|   |   |    +---Frontend
+|   |   |    |   +---Auth
+|   |   |    |   |   TwoFactorAuthenticationController.php
+|   |   |    |   CartController.php
+|   |   |    |   CheckoutController.php
+|   |   |    |   HomeController.php
+|   |   |    |   ProductsController.php
+|   |   |    |   ProfileController.php
+|   |   |    |   ReviewsController.php
+|   |   |    |   ShopGridController.php
+|   |   +---Middleware
+|   |   |       Authenticate.php
+|   |   |       CheckApiToken.php
+|   |   |       CheckUserType.php
+|   |   |       EncryptCookies.php
+|   |   |       PreventRequestsDuringMaintenance.php
+|   |   |       RedirectIfAuthenticated.php
+|   |   |       TrimStrings.php
+|   |   |       TrustHosts.php
+|   |   |       TrustProxies.php
+|   |   |       VerifyCsrfToken.php
+|   |   |
+|   |    \---Kernel.php   
+|   |   
+|   +---Models
+|   |   +---Scopes
+|   |   |   StoreScope
+|   |   Admin.php
+|   |   Attribute.php
+|   |   AttributeValue.php
+|   |   Banner.php
+|   |   Brand.php
+|   |   Cart.php
+|   |   Category.php
+|   |   Coupon.php
+|   |   Order.php
+|   |   OrderAddress.php
+|   |   OrderItem.php
+|   |   Product.php
+|   |   ProductAttribute.php
+|   |   ProductAttributeValue.php
+|   |   ProductVariant.php
+|   |   Profile.php
+|   |   Review.php
+|   |   Role.php
+|   |   RoleAbility.php
+|   |   Store.php
+|   |   Tag.php
+|   |   User.php
+|   |   Variant.php
+|   |   VariantAttribute.php
+|   |   Vandor.php
+|   |   WebsiteParts.php
+|   |     
+|   \---Proviers
+|          AppServiceProvider.php
+|          AuthServiceProvider.php
+|          BroadcastServiceProvider.php
+|          CartServiceProvider.php
+|          EventServiceProvider.php
+|          FortifyServiceProvider.php
+|          RouteServiceProvider.php
+|   
++---database
+|   \---factories
+|           AdminFactory.php
+|           CategoryFactory.php
+|           ProductFactory.php
+|           StoreFactory.php
+|           UserFactory.php
+|   \---migrations
+|           
+|   \---seeders
+|           AdminSeeder.php
+|           DatabaseSeeder.php
+|           UserSeeder.php
+|           WebsitePartsSeeder.php
+|
+\---resources
+    |
+    |
+    \---views
+        |   welcome.blade.php
+        |   
+        +---sessions
+        |   |   create.blade.php
+        |   |   
+        |   \---passwords
+        |           reset.blade.php
+        |           verify.blade.php
+        |           
+        +---components
+        |   |   layout.blade.php
+        |   |   plugins.blade.php
+        |   |   
+        |   +---footers
+        |   |       auth.blade.php
+        |   |       guest.blade.php
+        |   |       
+        |   \---navbars
+        |      |   sidebar.blade.php
+        |      |   
+        |      \---navs
+        |             auth.blade.php
+        |             guest.blade.php
+        |              
+        |           
+        +---pages
+        |   |   billing.blade.php
+        |   |   notifications.blade.php
+        |   |   profile.blade.php
+        |   |   rtl.blade.php
+        |   |   static-sign-in.blade.php
+        |   |   static-sign-up.blade.php
+        |   |   tables.blade.php
+        |   |   virtual-reality.blade.php
+        |   |  
+        |   \---laravel-examples
+        |           user-management.blade.php
+        |           user-profile.blade.php
+        |       
+        +---dashboard
+        |       index.blade.php
+        | 
+        +---errors
+        |       401.blade.php
+        |       403.blade.php
+        |       404.blade.php
+        |       405.blade.php
+        |       419.blade.php
+        |       429.blade.php
+        |       500.blade.php
+        |       503.blade.php
+        |
+        \---register
+                create.blade.php

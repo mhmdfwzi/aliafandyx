@@ -1,0 +1,36 @@
+- Events 
+ هو حاجة بنفذها لما حاجه أو حدث يحصل عندى فى الكود مثلاً Events  ال 
+
+ order معناه أن فى حدث حصل و هو أن ال OrderCreated هسمية  Event هنا مثلا عندى 
+ دى Events علشان تتنفذ على ال  Listeners بعد كده بعمل حاجه أسمها  create أتعملوا 
+
+
+syntax => event(new EventClassName::class)
+command => php artisan make:event EventName
+
+In this project => event(new OrderCreated($order));  in CheckoutController.php
+
+ $listen بحط الكلام دا جوه ال  Listeners و ال  Events  بحط جواه ال EventServiceProvider عندى providers جوه ال 
+ 
+-------------------------------------------------------------------
+
+- Listeners
+
+ يحصل أو يتنفذ event هى الحاجات بتتنفذ لما ال Listeners ال 
+
+
+command => php artisan make:lisener ListenerName
+
+
+-------------------------------------------------------------------
+
+- Notification 
+
+  معين  event هى أشعارات أو حاجات بنفذها بعد ما يحصل حاجة معينه أو Notification  ال 
+  أن فى أوردر أتعمل و هكذا store زى مثلا لو حد طلب أوردر فا بيتبعت أشعار للأدمن و صاحب ال
+   sms , mail ,  زى مثلا notifications لل channel فى كذا 
+   .env ملف ال mail بتاعت ال configuration هلاقى ال mail notification channel لو أنا مستخدم 
+
+
+   command => php artisan notification:table
+   notifications لجدول ال migration دا بيعمل command ال

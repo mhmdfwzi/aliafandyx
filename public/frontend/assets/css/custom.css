@@ -1,0 +1,142 @@
+/* header top */
+.topbar {
+          direction: rtl;
+}
+
+.menu-top-link,
+.useful-links {
+          text-align: right;
+}
+
+.top-end {
+          text-align: right;
+}
+
+.user-login {
+          direction: ltr;
+          text-align: left;
+}
+
+.user-login li {
+          display: inline-block;
+          margin-left: 10px;
+}
+
+.header .topbar .top-left .menu-top-link li {
+          display: inline-block;
+          margin-left: 20px;
+}
+
+
+
+
+
+/* header middle */
+.header-middle {
+          direction: rtl;
+}
+
+.navbar-brand {
+          text-align: right;
+}
+
+.main-menu-search {
+          text-align: right;
+}
+
+.middle-right-area {
+          text-align: right;
+}
+
+.nav-hotline {
+          text-align: right;
+}
+
+.navbar-cart {
+          text-align: left;
+}
+
+.wishlist {
+          text-align: left;
+}
+
+.navbar-cart {
+          text-align: left;
+}
+
+.navbar-nav .nav-item:last-child {
+          margin-right: 40px !important;
+}
+
+.navbar-nav .nav-item a.dd-menu::after {
+          content: "\ea5e";
+          font: normal normal normal 1em/1 "LineIcons";
+          position: absolute;
+          right:50px;
+          font-size: 12px;
+          top: 50%;
+          margin-left: 5px;
+          margin-top: -4px;
+          -webkit-transition: all 0.3s ease-out 0s;
+          transition: all 0.3s ease-out 0s;
+          height: 10px;
+}
+
+.header .navbar-cart .cart-items .shopping-item {
+          left: 0;
+          top: 30px;
+}
+
+
+/* header bottom */
+
+.container.header-bottom {
+          direction: rtl;
+}
+
+.mega-category-menu .sub-category,
+.nav-inner .navbar-nav,
+.nav-social ul {
+          text-align: right;
+}
+
+.header .mega-category-menu {
+          position: relative;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          border-left: 1px solid #eee;
+          margin-right: 40px;
+          margin-left: 0px;
+          padding-left: 112px;
+          padding-right: 0px;
+
+          cursor: pointer;
+}
+
+.header .mega-category-menu .cat-button i {
+          display: inline-block;
+          margin-left: 12px;
+          font-size: 20px;
+          position: relative;
+          top: 2px;
+}
+
+.nav-inner .navbar-toggler {
+          float: right;
+}
+
+.nav-inner .navbar-collapse {
+          text-align: right;
+}
+
+.nav-inner .navbar-nav .nav-item {
+          float: right;
+}
+
+.nav-inner .nav-social {
+          text-align: left;
+}

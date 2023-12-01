@@ -1,0 +1,56 @@
+<?php
+        //  Wasage API Base URL
+        $baseUrl = 'https://wasage.com/api/otp/';
+
+        //  Wasage API credentials
+        $username = '78548f88ba6dbaf31b3e4103274b5612c38f149269b66ca223cca35988616667';
+        $password = '387206321f0d74d961cf08bf3dd28cc23de0e05c713bf24d3d4e6413e39dba0a';
+
+        // Generate an OTP for the user 
+        $otp = mt_rand(100000, 999999);
+
+        
+        $mobile = '201090537394'; 
+
+        
+        $message = 'Welcome to Your App! Your OTP is: ' . $otp . ' for account verification.';
+
+        // Prepare the request parameters
+        $params = [
+            'Username' => $username,
+            'Password' => $password,
+            'Mobile' => $mobile,
+            'Message' => $message,
+        ];
+
+        // Initialize the Guzzle client
+        $client = new Client();
+
+        try {
+            // Send the POST request to the Wasage API
+            $response = $client->post($baseUrl, [
+                'json' => $params,
+            ]);
+
+            dd($response);
+            // Parse the JSON response
+            $data = json_decode($response->getBody(), true);
+
+            // Check if the response is successful
+            if ($data['Code'] === '5500') {
+                // OTP sent successfully, do something with the response data
+                
+                return response()->json(['success' => true, 'message' => 'OTP sent successfully']);
+            } else {
+                // Wasage API returned an error response
+                
+                return response()->json(['success' => false, 'message' => 'Failed to send OTP']);
+            }
+        } catch (RequestException $e) {
+            // Handle request exceptions, such as network errors, timeout, etc.
+            return response()->json(['success' => false, 'message' => 'Failed to send OTP. Request Exception: ' . $e->getMessage()]);
+        } catch (\Exception $e) {
+            // Handle any other exceptions that occurred during the request
+            return response()->json(['success' => false, 'message' => 'An error occurred: ' . $e->getMessage()]);
+        }
+    
